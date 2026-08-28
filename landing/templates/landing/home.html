@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesion 1 - Landing</title>
+    <link rel="stylesheet" href="{% static 'landing/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Sesion1</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a sesión a 1 tu primer proyecto de django</h1>
+            <p>Simple rápido y potente</p>
+            <a href="#acerca" class="btn">Descubrir</a>
+        </div>
+    </section>
+
+    <section id="acerca" class="about">
+        <h2>Acerca de</h2>
+        <div class="about-grid">
+            <div class="card">
+                <h3>Rápido</h3>
+                <p>Desarrolla e implementa tus ideas a gran velocidad con Django.</p>
+            </div>
+            <div class="card">
+                <h3>Seguro</h3>
+                <p>Protege tus datos con la seguridad integrada del framework.</p>
+            </div>
+            <div class="card">
+                <h3>Escalable</h3>
+                <p>Crea aplicaciones que crecen junto a tus necesidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">&#9733;</div>
+                <h3>Desarrollo Web</h3>
+                <p>Creacion de sitios web modernos y funcionales.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">&#9881;</div>
+                <h3>APIs REST</h3>
+                <p>Desarrollo de APIs para integraciones.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">&#9729;</div>
+                <h3>Deploy</h3>
+                <p>Despliegue en la nube con configuracion completa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sesion 1. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
