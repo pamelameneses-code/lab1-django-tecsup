@@ -1,0 +1,21 @@
+{% extends "quiz/base.html" %}
+{% block title %}{{ exam.title }}{% endblock %}
+{% block content %}
+<h1>{{ exam.title }}</h1>
+<p>{{ exam.description }}</p>
+
+<h2>Preguntas</h2>
+{% for question in exam.questions.all %}
+  <div class="question-card">
+    <strong>{{ question.text }}</strong>
+    <span class="score-tag">puntaje: {{ question.score }}</span>
+    <ul>
+      {% for choice in question.choices.all %}
+        <li class="{% if choice.is_correct %}correct{% endif %}">
+          {{ choice.text }} {% if choice.is_correct %}✔{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+<h1>{{ exam.title }}</h1>
+<p>{{ exam.description }}</p>
+
+<h2>Preguntas</h2>
+<ul>
+  {% for question in exam.questions.all %}
+    <li>
+      <strong>{{ question.text }}</strong> (puntaje: {{ question.score }})
+      <ul>
+        {% for choice in question.choices.all %}
+          <li>{{ choice.text }} {% if choice.is_correct %}✔{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
